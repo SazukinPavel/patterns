@@ -1,1 +1,1 @@
-# patterns
+# patterns in TypeScript
