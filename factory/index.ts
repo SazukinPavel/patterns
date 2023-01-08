@@ -1,14 +1,27 @@
+import DocumentFactoryAlt from "./factorys/DocumentFactoryAlt";
 import DocxFactory from "./factorys/DocxFactory";
-import PdfFactory from './factorys/PdfFactory';
+import PdfFactory from "./factorys/PdfFactory";
 
-const docxFactory=new DocxFactory()
+//classic
 
-const docxDocument=docxFactory.createDocument('docx 1')
+const docxFactory = new DocxFactory();
 
-docxFactory.read(docxDocument)
+const docxDocument = docxFactory.createDocument("docx 1");
 
-const pdfFactory=new PdfFactory()
+docxFactory.read(docxDocument);
 
-const pdfDocument=pdfFactory.createDocument('pdf 1')
+const pdfFactory = new PdfFactory();
 
-pdfFactory.read(pdfDocument)
+const pdfDocument = pdfFactory.createDocument("pdf 1");
+
+pdfFactory.read(pdfDocument);
+
+//alternative
+
+const documentFactoryAlt = new DocumentFactoryAlt();
+
+const pdfDoc1 = new (documentFactoryAlt.createDocument("pdf"))('pdf 2');
+const docxDoc1 = new (documentFactoryAlt.createDocument("docx"))('docx 2');
+
+documentFactoryAlt.read(pdfDoc1);
+documentFactoryAlt.read(docxDoc1);
