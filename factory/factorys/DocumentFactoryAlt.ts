@@ -10,8 +10,8 @@ const DOC_TYPE = {
 type DT = typeof DOC_TYPE;
 
 export default class DocumentFactoryAlt {
-  createDocument<T extends keyof DT>(type: T): DT[T] {
-    return DOC_TYPE[type];
+  createDocument<T extends keyof DT>(type: T, name?: string): IDocument {
+    return new DOC_TYPE[type](name);
   }
 
   async read(doc: IDocument) {
