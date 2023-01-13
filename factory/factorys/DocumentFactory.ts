@@ -1,4 +1,4 @@
-import IDocument from "../documents/IDocument";
+import IDocument from "../interfaces/IDocument";
 
 export default abstract class DocumentFactory {
   abstract createDocument(name:string): IDocument;

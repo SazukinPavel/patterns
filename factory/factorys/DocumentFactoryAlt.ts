@@ -1,5 +1,5 @@
 import { DocxDocument } from "../documents/DocxDocument";
-import IDocument from "../documents/IDocument";
+import IDocument from "../interfaces/IDocument";
 import { PdfDocument } from "../documents/PdfDocument";
 
 const DOC_TYPE = {

@@ -1,4 +1,4 @@
-import IDocument from "./IDocument";
+import IDocument from "../interfaces/IDocument";
 
 export class DocxDocument implements IDocument {
   id: string;

@@ -1,4 +1,4 @@
-import IDocument from "./IDocument";
+import IDocument from "../interfaces/IDocument";
 
 export class PdfDocument implements IDocument {
   id: string;

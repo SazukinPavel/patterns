@@ -1,5 +1,5 @@
 import { PdfDocument } from "../documents/PdfDocument";
-import IDocument from "../documents/IDocument";
+import IDocument from "../interfaces/IDocument";
 import DocumentFactory from "./DocumentFactory";
 
 export default class PdfFactory extends DocumentFactory {
