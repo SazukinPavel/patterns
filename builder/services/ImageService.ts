@@ -1,6 +1,6 @@
 import Format from "../models/Format";
-import IPicture from "../models/IPicture";
-import IResolution from "../models/IResolution";
+import IPicture from "../interfaces/IPicture";
+import IResolution from "../interfaces/IResolution";
 
 export default class ImageService {
   private formats: Format[] = [];
