@@ -1,10 +1,10 @@
-import DownloaderHashProxy from "./models/DownloaderHashProxy";
+import DownloaderHashProxy from "./models/YouTubeDownloaderServiceHashProxy";
 import DownloaderService from "./models/DownloaderService";
 import YouTubeDownloaderService from "./models/YouTubeDownloaderService";
 
 const downloaderService = new DownloaderService(new YouTubeDownloaderService());
 const downloaderServiceWithHashing = new DownloaderService(
-  new DownloaderHashProxy(new YouTubeDownloaderService())
+  new DownloaderHashProxy()
 );
 
 console.log("Base service");

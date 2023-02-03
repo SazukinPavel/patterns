@@ -1,12 +1,15 @@
 import NodeCache from "node-cache";
 import IVideoDownloader from "../interfaces/IVideoDownloader";
+import YouTubeDownloaderService from "./YouTubeDownloaderService";
 
-export default class DownloaderHashProxy implements IVideoDownloader {
+export default class YouTubeDownloaderServiceHashProxy
+  implements IVideoDownloader
+{
   private cashed: NodeCache;
-  private service: IVideoDownloader;
+  private service: YouTubeDownloaderService;
 
-  constructor(service: IVideoDownloader) {
-    this.service = service;
+  constructor() {
+    this.service = new YouTubeDownloaderService();
     this.cashed = new NodeCache();
   }
 
